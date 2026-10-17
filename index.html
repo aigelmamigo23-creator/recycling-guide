@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recycling Guide: What Goes in Which Bin</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito+Sans:wght@400;600;800&display=swap">
+<style>
+:root{
+  --bg:#f3f7ee; --ink:#14301f; --muted:#4d6354; --card:#ffffff; --line:#c9d8c3;
+  --bio:#3f8f3a; --rec:#2a6fb0; --res:#6b6f72; --haz:#c0501c;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0f1c14;--ink:#e8f2e4;--muted:#a3b8a8;--card:#172a1e;--line:#2c4434;--bio:#6cc466;--rec:#6aaee8;--res:#a4a8ab;--haz:#f08a56}
+}
+:root[data-theme="dark"]{--bg:#0f1c14;--ink:#e8f2e4;--muted:#a3b8a8;--card:#172a1e;--line:#2c4434;--bio:#6cc466;--rec:#6aaee8;--res:#a4a8ab;--haz:#f08a56}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+main{max-width:640px;margin:0 auto;padding:28px 18px 40px}
+h1{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-weight:900;font-size:clamp(2rem,9vw,2.8rem);line-height:1.05;margin:0 0 10px}
+.lead{color:var(--muted);margin:0 0 22px;max-width:46ch}
+.bin{background:var(--card);border:1px solid var(--line);border-left:10px solid var(--c);border-radius:6px;margin:0 0 14px}
+.bin summary{list-style:none;cursor:pointer;padding:16px 16px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bin summary::-webkit-details-marker{display:none}
+.bin summary:focus-visible{outline:3px solid var(--c);outline-offset:2px}
+.bin h2{font-family:"Fraunces",Georgia,serif;font-size:1.35rem;margin:0;color:var(--c)}
+.bin .sub{font-size:.92rem;color:var(--muted);margin:2px 0 0}
+.chev{width:12px;height:12px;border-right:3px solid var(--c);border-bottom:3px solid var(--c);transform:rotate(45deg);transition:transform .2s;flex:none;margin-right:4px}
+.bin[open] .chev{transform:rotate(225deg)}
+.inner{padding:0 16px 16px;border-top:1px dashed var(--line)}
+h3{font-size:.95rem;font-weight:800;margin:14px 0 6px}
+ul{margin:0;padding-left:1.15rem}
+li{margin:3px 0}
+.no li::marker{content:"✕  ";color:var(--haz)}
+.yes li::marker{content:"✓  ";color:var(--c)}
+.tip{margin:14px 0 0;padding:10px 12px;background:var(--bg);border-radius:4px;font-size:.93rem}
+footer{margin-top:26px;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<h1>Sort it right. Help Mother Nature.</h1>
+<p class="lead">Tap a bin to see what goes in it. Rinse, dry and separate your waste before it leaves your hands.</p>
+
+<details class="bin" style="--c:var(--bio)" open>
+<summary><div><h2>Biodegradable</h2><p class="sub">Food scraps and plants</p></div><span class="chev"></span></summary>
+<div class="inner">
+<h3>Put in</h3>
+<ul class="yes"><li>Fruit and vegetable peels</li><li>Leftover food</li><li>Eggshells, coffee grounds, tea bags</li><li>Leaves, grass and yard trimmings</li><li>Clean paper napkins</li></ul>
+<h3>Keep out</h3>
+<ul class="no"><li>Anything plastic-coated</li><li>Meat and fish bones, unless your barangay accepts them</li></ul>
+<p class="tip"><strong>Tip:</strong> compost it at home or give it to the barangay collection.</p>
+</div>
+</details>
+
+<details class="bin" style="--c:var(--rec)">
+<summary><div><h2>Recyclable</h2><p class="sub">Clean and dry only</p></div><span class="chev"></span></summary>
+<div class="inner">
+<h3>Put in</h3>
+<ul class="yes"><li>Paper, cardboard and newspaper</li><li>PET bottles and HDPE containers</li><li>Aluminum and tin cans</li><li>Glass bottles and jars</li><li>Clean plastic bags and sachets, if accepted locally</li></ul>
+<h3>Keep out</h3>
+<ul class="no"><li>Greasy pizza boxes</li><li>Wet or food-soiled paper</li></ul>
+<p class="tip"><strong>Tip:</strong> rinse, dry and flatten, then bring to your MRF or junk shop.</p>
+</div>
+</details>
+
+<details class="bin" style="--c:var(--res)">
+<summary><div><h2>Residual</h2><p class="sub">Non-recyclable trash</p></div><span class="chev"></span></summary>
+<div class="inner">
+<h3>Put in</h3>
+<ul class="yes"><li>Sanitary napkins and diapers</li><li>Candy and snack wrappers</li><li>Used tissue and soiled paper</li><li>Styrofoam and broken ceramics</li><li>Cigarette butts</li></ul>
+<h3>Keep out</h3>
+<ul class="no"><li>Clean items that can still be recycled</li></ul>
+<p class="tip"><strong>Tip:</strong> bag it securely for regular garbage collection.</p>
+</div>
+</details>
+
+<details class="bin" style="--c:var(--haz)">
+<summary><div><h2>Special and hazardous</h2><p class="sub">Drop-off items</p></div><span class="chev"></span></summary>
+<div class="inner">
+<h3>Put in</h3>
+<ul class="yes"><li>Batteries and power banks</li><li>Old phones, chargers and other e-waste</li><li>Paint, thinner and pesticides</li><li>Fluorescent bulbs and CFLs</li><li>Used cooking oil and medical waste</li></ul>
+<h3>Keep out</h3>
+<ul class="no"><li>Regular trash bins. Never mix these with other waste.</li></ul>
+<p class="tip"><strong>Tip:</strong> bring them to a designated collection point.</p>
+</div>
+</details>
+
+<footer>Collection rules differ by barangay, so check with your local office for schedules and drop-off points.</footer>
+</main>
+</body>
+</html>
